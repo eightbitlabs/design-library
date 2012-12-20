@@ -59,6 +59,9 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
+<description>&lt;b&gt; EightBitLabs Design Library&lt;/b&gt;
+
+&lt;p&gt;Design library containing all parts for EightBitLabs parts.</description>
 <packages>
 </packages>
 <symbols>
