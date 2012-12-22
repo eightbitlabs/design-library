@@ -201,6 +201,17 @@
 <text x="-10.16" y="16.51" size="1.778" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-13.97" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
 </symbol>
+<symbol name="TLV1117-FIXED">
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="IN" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="OUT" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="GND" x="10.16" y="-2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<text x="-7.62" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-6.35" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="TXS0108E" prefix="U">
