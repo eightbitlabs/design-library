@@ -227,6 +227,32 @@
 <smd name="28" x="5.85" y="5.4" dx="1.2" dy="0.7" layer="1" rot="R180"/>
 <wire x1="-6.75" y1="7.25" x2="-5.85" y2="8.15" width="0.127" layer="21"/>
 </package>
+<package name="RUFA-LEFT">
+<wire x1="-6.4" y1="1.95" x2="6.4" y2="1.95" width="0.127" layer="21"/>
+<wire x1="6.4" y1="1.95" x2="6.4" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="6.4" y1="-1.95" x2="-6.4" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-6.4" y1="-1.95" x2="-6.4" y2="1.95" width="0.127" layer="21"/>
+<smd name="NC1" x="-5.05" y="1.15" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="FEED" x="-5.05" y="-1.15" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="GND" x="0.65" y="-1.15" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="NC2" x="5.05" y="1.15" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="NC3" x="5.05" y="-1.15" dx="1" dy="2" layer="1" rot="R90"/>
+<text x="-6.4" y="2.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-6.4" y="-2.35" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+</package>
+<package name="RUFA-RIGHT">
+<wire x1="6.75" y1="1.6" x2="-6.05" y2="1.6" width="0.127" layer="22"/>
+<wire x1="-6.05" y1="1.6" x2="-6.05" y2="-2.3" width="0.127" layer="22"/>
+<wire x1="-6.05" y1="-2.3" x2="6.75" y2="-2.3" width="0.127" layer="22"/>
+<wire x1="6.75" y1="-2.3" x2="6.75" y2="1.6" width="0.127" layer="22"/>
+<smd name="NC1" x="5.4" y="0.8" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="FEED" x="5.4" y="-1.5" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="GND" x="-0.3" y="-1.5" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="NC2" x="-4.7" y="0.8" dx="1" dy="2" layer="1" rot="R90"/>
+<smd name="NC3" x="-4.7" y="-1.5" dx="1" dy="2" layer="1" rot="R90"/>
+<text x="-6.05" y="2" size="1.27" layer="25">&gt;NAME</text>
+<text x="-6.05" y="-2.7" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TXS0108E">
@@ -297,6 +323,15 @@
 <pin name="WL_EN2" x="22.86" y="7.62" visible="pin" length="short" direction="in" rot="R180"/>
 <pin name="WL_EN1" x="22.86" y="10.16" visible="pin" length="short" direction="in" rot="R180"/>
 <pin name="RF_ANT" x="-22.86" y="7.62" visible="pin" length="short"/>
+</symbol>
+<symbol name="RUFA">
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<pin name="FEED" x="0" y="-5.08" visible="pin" length="point" direction="in" rot="R270"/>
+<pin name="GND" x="-5.08" y="2.54" visible="pin" length="short" direction="pwr"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -400,6 +435,38 @@ Maximum 1.3V dropout at 800mA.
 <connect gate="G$1" pin="WL_EN2" pad="5"/>
 <connect gate="G$1" pin="WL_RS232_RX" pad="8"/>
 <connect gate="G$1" pin="WL_RS232_TX" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUFA-LEFT">
+<gates>
+<gate name="G$1" symbol="RUFA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUFA-LEFT">
+<connects>
+<connect gate="G$1" pin="FEED" pad="FEED"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUFA-RIGHT">
+<gates>
+<gate name="G$1" symbol="RUFA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUFA-RIGHT">
+<connects>
+<connect gate="G$1" pin="FEED" pad="FEED"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
 </connects>
 <technologies>
 <technology name=""/>
